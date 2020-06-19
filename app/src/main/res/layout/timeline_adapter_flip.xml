@@ -1,0 +1,298 @@
+
+
+
+
+<au.com.letsjoinin.android.UI.EasyFlipView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/flipView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:flipDuration="400"
+    app:flipEnabled="true"
+    app:flipOnTouch="false"
+    >
+
+
+    <!-- Back Layout Goes Here -->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="2dp"
+        android:id="@+id/lock_view"
+        android:layout_margin="6dp"
+        android:background="@drawable/border_timeline"
+        android:layout_height="250dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_lock"
+            android:layout_height="100dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Tap to open"
+            android:textColor="@color/black"
+            android:layout_marginTop="6dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="I have invitation code"
+            android:textColor="@color/black"
+            android:layout_marginTop="6dp"
+            android:id="@+id/txt_invitation_code"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <!-- Front Layout Goes Here -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="2dp"
+        android:id="@+id/layout_front_view"
+        android:layout_margin="6dp"
+        android:background="@drawable/border_timeline"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/ad_layout"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/media_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="140dp">
+                <ImageView
+                    android:id="@+id/play_exo_player_ad"
+                    android:layout_width="90dp"
+                    android:layout_centerInParent="true"
+                    android:layout_height="90dp"
+                    android:padding="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/play_btn_big"/>
+
+
+                <au.com.letsjoinin.android.exoplayer.CustomTextureVideoView
+                    android:id="@+id/video_feed_item_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:minHeight="1dp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/media_layout1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:id="@+id/title"
+                    android:text="Ads Here"
+                    android:textColor="@color/md_grey_800"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_content_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp">
+
+                <TextView
+                    android:id="@+id/txt_timeline_item_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toLeftOf="@+id/txt_timeline_item_img_qa"
+                    android:textColor="@color/md_grey_600"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+
+                <ImageView
+                    android:id="@+id/txt_timeline_item_img_qa"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/qa" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/media_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="100dp">
+
+                    <au.com.letsjoinin.android.UI.view.DynamicHeightImageView
+                        android:id="@+id/timeline_item_imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:visibility="gone" />
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/timeline_loading"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/loading" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/lay_item_favourite"
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:layout_above="@+id/lay_timeline_item_txt_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="-4dp"
+                    android:layout_toLeftOf="@+id/lay_timeline_item_share"
+                    android:background="@drawable/layout_top_round_corner">
+
+                    <com.sackcentury.shinebuttonlib.ShineButton
+                        android:id="@+id/item_favourite"
+                        android:layout_width="18dp"
+                        android:layout_height="15dp"
+                        android:layout_centerInParent="true"
+                        android:elevation="10dp"
+                        app:btn_color="@android:color/darker_gray"
+                        app:btn_fill_color="#f26d7d"
+                        app:siShape="@drawable/ic_hearts" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lay_timeline_item_share"
+                    android:layout_width="30dp"
+                    android:layout_height="32dp"
+                    android:layout_above="@+id/lay_timeline_item_txt_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="-4dp"
+                    android:background="@drawable/layout_top_round_corner">
+
+                    <ImageView
+                        android:id="@+id/item_share"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerInParent="true"
+                        android:elevation="10dp"
+                        android:src="@drawable/ic_share"
+                        android:tint="@color/colorPrimaryDark" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lay_timeline_item_txt_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/media_layout">
+
+                    <TextView
+                        android:id="@+id/txt_timeline_item_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="hskdddd"
+                        android:layout_marginTop="4dp"
+                        android:layout_toLeftOf="@+id/txt_timeline_item_part_count"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textColor="@color/md_grey_800"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/v1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginRight="8dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/txt_timeline_item_img_count"
+                            android:layout_width="16dp"
+                            android:layout_height="12dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/users_group"
+                            android:tint="@color/txt1" />
+
+                        <TextView
+                            android:id="@+id/txt_timeline_item_part_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_below="@+id/txt_timeline_item_img_count"
+                            android:textColor="@color/txt1"
+                            android:textSize="9sp" />
+                    </LinearLayout>
+
+
+
+                    <au.com.letsjoinin.android.utils.JustifiedTextView
+                        android:id="@+id/txt_timeline_item_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_timeline_item_name"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toLeftOf="@+id/v1"
+                        android:layout_marginRight="8dp"
+                        android:text="hskdddd"
+                        android:layout_marginBottom="6dp"
+                        android:clickable="false"
+                        android:textColor="@color/md_grey_600"
+                        android:textSize="11sp"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+</au.com.letsjoinin.android.UI.EasyFlipView>

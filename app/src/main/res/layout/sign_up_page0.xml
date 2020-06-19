@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:text="Please provide your"
+        android:layout_marginTop="50dp"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:text="Enterprise Code"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp" />
+<!--    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"-->
+    <EditText
+        android:id="@+id/sign_up_tv_last_field"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/round_border"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:inputType="text"
+        android:maxLength="18"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/signup_btn_proceed"
+        android:layout_width="180dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#D5D2D2"
+        android:layout_gravity="center"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+        android:background="@drawable/round_back_view"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:layout_marginBottom="11dp"
+        android:text="Proceed"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15dp"/>
+
+</LinearLayout>

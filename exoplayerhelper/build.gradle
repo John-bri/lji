@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'utils'
+    bintrayName = 'exoplayerhelper'
+
+    publishedGroupId = 'net.alexandroid.utils'
+    libraryName = 'ExoPlayerHelper'
+    artifact = 'exoplayerhelper'
+
+    libraryDescription = 'ExoPlayer wrapper (ExoPlayer is an application level media player for Android)'
+
+
+    libraryVersion = '2.20'
+
+}
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+}
+
+ext.exoPlayerVersion = '2.10.1'
+
+dependencies {
+    api "com.google.android.exoplayer:exoplayer-core:$exoPlayerVersion"
+    api "com.google.android.exoplayer:exoplayer-ui:$exoPlayerVersion"
+    api "com.google.android.exoplayer:exoplayer-hls:$exoPlayerVersion"
+    api "com.google.android.exoplayer:exoplayer-dash:$exoPlayerVersion"
+    api "com.google.android.exoplayer:exoplayer-smoothstreaming:$exoPlayerVersion"
+    api "com.google.android.exoplayer:extension-ima:$exoPlayerVersion"
+}
+
+//apply from: 'publish.gradle'

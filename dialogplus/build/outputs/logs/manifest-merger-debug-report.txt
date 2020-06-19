@@ -1,0 +1,19 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Project\code\LetsJoinIn20_Android\dialogplus\src\main\AndroidManifest.xml:1:1-47
+INJECTED from D:\Project\code\LetsJoinIn20_Android\dialogplus\src\main\AndroidManifest.xml:1:1-47
+INJECTED from D:\Project\code\LetsJoinIn20_Android\dialogplus\src\main\AndroidManifest.xml:1:1-47
+	package
+		ADDED from D:\Project\code\LetsJoinIn20_Android\dialogplus\src\main\AndroidManifest.xml:1:11-45
+		INJECTED from D:\Project\code\LetsJoinIn20_Android\dialogplus\src\main\AndroidManifest.xml
+		INJECTED from D:\Project\code\LetsJoinIn20_Android\dialogplus\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Project\code\LetsJoinIn20_Android\dialogplus\src\main\AndroidManifest.xml:1:1-47
+uses-sdk
+INJECTED from D:\Project\code\LetsJoinIn20_Android\dialogplus\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\Project\code\LetsJoinIn20_Android\dialogplus\src\main\AndroidManifest.xml
+INJECTED from D:\Project\code\LetsJoinIn20_Android\dialogplus\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\Project\code\LetsJoinIn20_Android\dialogplus\src\main\AndroidManifest.xml
+		ADDED from D:\Project\code\LetsJoinIn20_Android\dialogplus\src\main\AndroidManifest.xml
+		INJECTED from D:\Project\code\LetsJoinIn20_Android\dialogplus\src\main\AndroidManifest.xml

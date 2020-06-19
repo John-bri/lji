@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_height="match_parent"
+                tools:context="au.com.letsjoinin.android.UI.activity.NavigationActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/drawer_layout"
+                android:layout_width="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_height="match_parent"
+                tools:context="au.com.letsjoinin.android.UI.activity.NavigationActivity">
+
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:background="@drawable/signup_grid_round_border"
+                    android:elevation="12dp"
+                    android:visibility="gone"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#FCD409"
+                    android:id="@+id/check_connection"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:layout_height="56dp">
+
+
+        <ImageView
+                android:id="@+id/network_change_img"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_warning"
+                android:layout_width="48dp"
+                android:padding="10dp"
+                android:tint="@color/white"
+                android:layout_height="48dp"/>
+        <TextView
+                android:id="@+id/tv_check_connection"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:textStyle="bold"
+                android:text="Could not Connect to internet"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/relative_tool_bar"
+            android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+                android:id="@+id/profile_img_arrow"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/back_arrow"
+                android:layout_width="48dp"
+                android:tint="@color/btn_orng"
+                android:padding="16dp"
+                android:visibility="gone"
+                android:layout_height="48dp"/>
+        <TextView
+                android:id="@+id/menu_title"
+                android:layout_toRightOf="@id/profile_img_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/title_home"
+                android:visibility="gone"
+                android:textSize="18sp"
+                android:textColor="@color/white"/>
+    </RelativeLayout>
+    <FrameLayout
+            android:id="@+id/container_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:background="@android:color/transparent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    <com.tenclouds.fluidbottomnavigation.FluidBottomNavigation
+            android:id="@+id/fluidBottomNavigation"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            app:height="50dp"
+            />
+
+</RelativeLayout>
+    <RelativeLayout
+            android:id="@+id/bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            app:behavior_hideable="true"
+            app:layout_behavior="@string/bottom_sheet_behavior"
+            app:behavior_peekHeight="0dp"
+            tools:ignore="MissingPrefix">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@android:color/black"
+                android:layout_alignParentBottom="true"
+                android:clickable="true"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="25dp"
+                    android:id="@+id/txt1"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            <ImageView
+                    android:id="@+id/img_close_disclaimer"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="13dp"
+                    android:tint="@color/white"
+                    android:src="@drawable/close" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

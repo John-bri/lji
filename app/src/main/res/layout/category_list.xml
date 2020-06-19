@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:cardElevation="4dp"
+                                    app:cardBackgroundColor="#F2F2F2"
+                                    app:cardPreventCornerOverlap="false">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:backgroundTint="@color/btn_orng"
+                  android:background="@drawable/signup_grid_round_border"
+                  android:layout_height="match_parent">
+
+        <TextView
+                android:text="Category"
+                android:id="@+id/txt_category"
+                android:layout_width="wrap_content"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="15sp"
+                android:layout_height="wrap_content"/>
+        <ImageView
+                android:id="@+id/close_view"
+                android:layout_width="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="8dp"
+                android:layout_gravity="center"
+                android:src="@drawable/close"
+                android:padding="11dp"
+                android:tint="@color/white"
+                android:layout_height="30dp"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

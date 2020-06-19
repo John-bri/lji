@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp">
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/img_1"
+        android:scaleType="centerCrop"
+        android:layout_height="80dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:id="@+id/selected_meal"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:background="@drawable/onesideroundedcorner"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/selected_recipe_lyt_1"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/leftonesideroundedcorner_gray"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/selected_cat"
+            android:textColor="@color/white"
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:id="@+id/close_1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/selected_cat"
+            android:layout_centerVertical="true"
+            android:background="@drawable/round_view_white"
+            android:gravity="center"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_close"
+            android:tint="@color/text_gray" />
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/line"
+        android:layout_below="@+id/img_1"
+        android:layout_height="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_light_gray"></View>
+</RelativeLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:id="@+id/notification_parent"
+                android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@color/white"
+            android:elevation="8dp"
+            card_view:cardCornerRadius="2dp">
+        <RelativeLayout
+                android:background="@color/white"
+                android:padding="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/notification_img_avatar"
+                    app:civ_border_color="#C2C1C1"
+                    android:layout_marginRight="14dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    app:civ_border_width="0.5dp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/notification_txt_content_msg"
+                    android:textColor="@color/text_gray"
+                    android:textSize="14sp"
+                    android:layout_toRightOf="@+id/notification_img_avatar"
+                    android:layout_height="wrap_content"/>
+            <LinearLayout
+                    android:layout_below="@+id/notification_txt_content_msg"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/notification_img_avatar"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="11sp"
+                        android:id="@+id/notification_txt_time"
+                        android:textColor="@color/text_gray"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="11sp"
+                        android:textColor="@color/text_gray"
+                        android:id="@+id/notification_txt_date"
+                        android:layout_marginLeft="20dp"
+                        android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/notification_img_avatar"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:id="@+id/layout_notification_media"
+                    android:layout_height="wrap_content">
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:id="@+id/img_notification"
+                        android:scaleType="fitXY"
+                        android:layout_height="180dp"/>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+                        <ImageView
+                                android:layout_width="16dp"
+                                android:scaleType="fitXY"
+                                android:tint="#2D1C91"
+                                android:src="@drawable/ic_user"
+                                android:layout_height="16dp"/>
+                        <TextView android:layout_width="wrap_content"
+                                  android:textSize="10sp"
+                                  android:text="participants"
+                                  android:layout_marginLeft="6dp"
+                                  android:layout_gravity="center"
+                                  android:id="@+id/txt_participants"
+                                  android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+                        <ImageView
+                                android:layout_width="16dp"
+                                android:scaleType="fitXY"
+                                android:tint="#D20C1F"
+                                android:src="@drawable/ic_hearts"
+                                android:layout_height="16dp"/>
+                        <TextView android:layout_width="wrap_content"
+                                  android:textSize="10sp"
+                                  android:text="added as favourite"
+                                  android:layout_marginLeft="8dp"
+                                  android:gravity="center"
+                                  android:layout_gravity="center"
+                                  android:id="@+id/txt_favourite"
+                                  android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+                        <ImageView
+                                android:layout_width="16dp"
+                                android:scaleType="fitXY"
+                                android:tint="#29A600"
+                                android:src="@drawable/ic_tick"
+                                android:layout_height="16dp"/>
+                        <TextView android:layout_width="wrap_content"
+                                  android:textSize="10sp"
+                                  android:text=" followed"
+                                  android:gravity="center"
+                                  android:layout_marginLeft="4dp"
+                                  android:layout_gravity="center"
+                                  android:id="@+id/txt_followed"
+                                  android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

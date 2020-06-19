@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.percentlayout.widget.PercentFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/custom_track_white">
+
+    <View
+        android:id="@+id/blue_oval"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/custom_track"
+        android:transformPivotX="0dp"
+        app:layout_widthPercent="50%">
+
+    </View>
+
+    <!-- TextView with blue oval as background-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingEnd="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingStart="8dp"
+        android:singleLine="true"
+        android:transformPivotX="0dp"
+        app:layout_widthPercent="50%"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingEnd="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingStart="8dp"
+        android:singleLine="true"
+        android:transformPivotX="0dp"
+        app:layout_widthPercent="50%"/>
+
+</androidx.percentlayout.widget.PercentFrameLayout>

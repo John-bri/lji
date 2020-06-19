@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'com.github.ben-manes.versions'
+//apply plugin: 'com.github.hierynomus.license'
+
+android {
+  compileSdkVersion COMPILE_SDK_VERSION as int
+
+  defaultConfig {
+    minSdkVersion 14
+    targetSdkVersion COMPILE_SDK_VERSION as int
+    versionCode VERSION_CODE as int
+    versionName VERSION_NAME
+
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+//  implementation "androidx.fragment:fragment:${ANDROIDX_BASE_VERSION}"
+  implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+}
+//
+//license {
+//
+//  sourceSets {
+//    main.java.srcDirs = android.sourceSets.main.java.srcDirs
+//    main.resources.srcDirs = android.sourceSets.main.resources.srcDirs
+//  }
+//
+//  ext.year = Calendar.getInstance().get(Calendar.YEAR)
+//  ext.name = DEVELOPER_ID
+//
+//}
+
+//pkginfo.name = ARTIFACT_NAME + '-V4Utils'
+//apply from: "${project.rootDir}/publish.gradle"

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="#E6FFFFFF"
+              android:layout_height="match_parent">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/splash"
+            android:background="@drawable/splash_s1_back"
+            android:layout_height="match_parent">
+
+        <ImageView
+                android:layout_width="250dp"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/lji_logo_new_trans_1024"
+                android:layout_height="250dp" />
+
+    </RelativeLayout>
+</LinearLayout>

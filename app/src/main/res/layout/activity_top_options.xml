@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/activity_root_view"
+        android:layout_height="match_parent"
+        tools:context="au.com.letsjoinin.android.UI.activity.ChatActivity">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="?actionBarSize">
+        <ImageView
+                android:id="@+id/top_opinion_img_arrow"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/back_arrow"
+                android:layout_width="48dp"
+                android:tint="@color/md_deep_orange_A700"
+                android:padding="16dp"
+                android:layout_height="48dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:text="Top Opinions"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_toRightOf="@+id/top_opinion_img_arrow"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:text="Active Group"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/lay_group_name"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"/>
+    </HorizontalScrollView>
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/top_opinion_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"/>
+    <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/top_opinion_shimmer_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+
+                <View
+                        android:layout_width="@dimen/placeholder_image"
+                        android:layout_height="@dimen/placeholder_image"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/activity_padding"
+                        android:background="@drawable/round_corner" />
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:backgroundTint="@color/default_color"
+                        android:background="@drawable/button_bg_black_with_rouned_corner"
+                        android:padding="15dp"
+                        android:orientation="vertical">
+
+                    <RelativeLayout android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                        <View
+                                android:layout_width="100dp"
+                                android:layout_height="5dp"
+                                android:background="@color/darker_color" />
+
+                        <View
+                                android:layout_width="40dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_height="@dimen/placeholder_text_height"
+                                android:background="@color/darker_color" />
+
+                    </RelativeLayout>
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_marginRight="50dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/darker_color" />
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/placeholder_text_height"
+                            android:layout_marginRight="160dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/darker_color" />
+
+                </LinearLayout>
+                <View
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="100dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="6dp"
+                        android:backgroundTint="@color/darker_color"
+                        android:layout_marginRight="@dimen/activity_padding"
+                        android:background="@drawable/round_corner" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+
+                <View
+                        android:layout_width="@dimen/placeholder_image"
+                        android:layout_height="@dimen/placeholder_image"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/activity_padding"
+                        android:background="@drawable/round_corner" />
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:backgroundTint="@color/default_color"
+                        android:background="@drawable/button_bg_black_with_rouned_corner"
+                        android:padding="15dp"
+                        android:orientation="vertical">
+
+                    <RelativeLayout android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                        <View
+                                android:layout_width="100dp"
+                                android:layout_height="5dp"
+                                android:background="@color/darker_color" />
+
+                        <View
+                                android:layout_width="40dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_height="@dimen/placeholder_text_height"
+                                android:background="@color/darker_color" />
+
+                    </RelativeLayout>
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_marginRight="50dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/darker_color" />
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/placeholder_text_height"
+                            android:layout_marginRight="160dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/darker_color" />
+
+                </LinearLayout>
+                <View
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="100dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="6dp"
+                        android:backgroundTint="@color/darker_color"
+                        android:layout_marginRight="@dimen/activity_padding"
+                        android:background="@drawable/round_corner" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+
+                <View
+                        android:layout_width="@dimen/placeholder_image"
+                        android:layout_height="@dimen/placeholder_image"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/activity_padding"
+                        android:background="@drawable/round_corner" />
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:backgroundTint="@color/default_color"
+                        android:background="@drawable/button_bg_black_with_rouned_corner"
+                        android:padding="15dp"
+                        android:orientation="vertical">
+
+                    <RelativeLayout android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                        <View
+                                android:layout_width="100dp"
+                                android:layout_height="5dp"
+                                android:background="@color/darker_color" />
+
+                        <View
+                                android:layout_width="40dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_height="@dimen/placeholder_text_height"
+                                android:background="@color/darker_color" />
+
+                    </RelativeLayout>
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_marginRight="50dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/darker_color" />
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/placeholder_text_height"
+                            android:layout_marginRight="160dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/darker_color" />
+
+                </LinearLayout>
+                <View
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="100dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="6dp"
+                        android:backgroundTint="@color/darker_color"
+                        android:layout_marginRight="@dimen/activity_padding"
+                        android:background="@drawable/round_corner" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+
+                <View
+                        android:layout_width="@dimen/placeholder_image"
+                        android:layout_height="@dimen/placeholder_image"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/activity_padding"
+                        android:background="@drawable/round_corner" />
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:backgroundTint="@color/default_color"
+                        android:background="@drawable/button_bg_black_with_rouned_corner"
+                        android:padding="15dp"
+                        android:orientation="vertical">
+
+                    <RelativeLayout android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                        <View
+                                android:layout_width="100dp"
+                                android:layout_height="5dp"
+                                android:background="@color/darker_color" />
+
+                        <View
+                                android:layout_width="40dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_height="@dimen/placeholder_text_height"
+                                android:background="@color/darker_color" />
+
+                    </RelativeLayout>
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_marginRight="50dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/darker_color" />
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/placeholder_text_height"
+                            android:layout_marginRight="160dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/darker_color" />
+
+                </LinearLayout>
+                <View
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="100dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="6dp"
+                        android:backgroundTint="@color/darker_color"
+                        android:layout_marginRight="@dimen/activity_padding"
+                        android:background="@drawable/round_corner" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+
+                <View
+                        android:layout_width="@dimen/placeholder_image"
+                        android:layout_height="@dimen/placeholder_image"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/activity_padding"
+                        android:background="@drawable/round_corner" />
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:backgroundTint="@color/default_color"
+                        android:background="@drawable/button_bg_black_with_rouned_corner"
+                        android:padding="15dp"
+                        android:orientation="vertical">
+
+                    <RelativeLayout android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                        <View
+                                android:layout_width="100dp"
+                                android:layout_height="5dp"
+                                android:background="@color/darker_color" />
+
+                        <View
+                                android:layout_width="40dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_height="@dimen/placeholder_text_height"
+                                android:background="@color/darker_color" />
+
+                    </RelativeLayout>
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_marginRight="50dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/darker_color" />
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/placeholder_text_height"
+                            android:layout_marginRight="160dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/darker_color" />
+
+                </LinearLayout>
+                <View
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="100dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="6dp"
+                        android:backgroundTint="@color/darker_color"
+                        android:layout_marginRight="@dimen/activity_padding"
+                        android:background="@drawable/round_corner" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</LinearLayout>

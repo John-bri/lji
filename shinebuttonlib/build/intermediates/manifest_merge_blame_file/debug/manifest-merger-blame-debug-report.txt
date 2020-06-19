@@ -1,0 +1,18 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:tools="http://schemas.android.com/tools"
+4    package="com.sackcentury.shinebuttonlib"
+5    android:versionCode="9"
+6    android:versionName="0.1.9" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="14"
+9-->D:\Project\code\LetsJoinIn20_Android\shinebuttonlib\src\main\AndroidManifest.xml
+10        android:targetSdkVersion="29" />
+10-->D:\Project\code\LetsJoinIn20_Android\shinebuttonlib\src\main\AndroidManifest.xml
+11
+12    <application>
+12-->D:\Project\code\LetsJoinIn20_Android\shinebuttonlib\src\main\AndroidManifest.xml:3:5-4:19
+13    </application>
+14
+15</manifest>

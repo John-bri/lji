@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1039542627210",
+    "firebase_url": "https://lets-join-in-37e6a.firebaseio.com",
+    "project_id": "lets-join-in-37e6a",
+    "storage_bucket": "lets-join-in-37e6a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1039542627210:android:46349470cc6de709ff7673",
+        "android_client_info": {
+          "package_name": "au.com.letsjoinin.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1039542627210-ouglscdnq6n1hudko308edh54228qjju.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "au.com.letsjoinin.android",
+            "certificate_hash": "38cd0651e1f5bcebc1db60e800a33216fc0417d5"
+          }
+        },
+        {
+          "client_id": "1039542627210-brbog8vbnoqbvftkl1fbpm2qsmqcmf3a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQhKs6XHttIJpTa6lC617OGtzHrXjD784"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1039542627210-76dne2qdilvdgeolnosmuqa6kdtadvqt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1039542627210-oo44r40lehqvi1bdsvsl4sjmkhbfb4t6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "au.com.socialmedia.letsjoinin"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

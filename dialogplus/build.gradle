@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+  compileSdkVersion 28
+
+  defaultConfig {
+    minSdkVersion 15
+  }
+
+  testOptions {
+    unitTests {
+      includeAndroidResources = true
+    }
+  }
+}
+
+dependencies {
+  implementation 'androidx.annotation:annotation:1.0.0'
+
+  testImplementation 'junit:junit:4.12'
+  testImplementation 'com.google.truth:truth:0.28'
+  testImplementation 'org.robolectric:robolectric:3.3'
+  testImplementation "org.mockito:mockito-core:2.8.9"
+  testImplementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.51"
+}
+
+//apply from: rootProject.file('gradle/maven_push.gradle')

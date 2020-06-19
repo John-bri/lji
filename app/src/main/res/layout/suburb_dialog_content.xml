@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/mainparent"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:background="@drawable/edittext_round_border">
+    <RelativeLayout
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        <EditText
+                android:id="@+id/txt_search_suburb"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/round_border"
+                android:gravity="center|left"
+                android:layout_centerVertical="true"
+                android:paddingLeft="8dp"
+                android:layout_marginRight="80dp"
+                android:inputType="textCapWords"
+                android:text=""
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"/>
+
+        <TextView
+                android:id="@+id/close_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Done"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:textColor="#fff"/>
+    </RelativeLayout>
+
+
+    <ListView
+            android:id="@+id/list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"/>
+
+    <TextView
+            android:text="No suburb found"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:id="@+id/txt_no_suburbs"
+            android:textStyle="italic"
+            android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/sign2_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/progress_lyt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/trasnsparentBlack"
+            android:clickable="true"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/pro_img"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                app:indicatorColor="@color/white"
+                app:indicatorName="BallTrianglePathIndicator" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pro_img"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Processing..."
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+
+        </RelativeLayout>
+
+        <ScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+
+                <EditText
+                    android:id="@+id/sign_up_tv_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/round_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="First Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:paddingLeft="10dp"
+                    android:textSize="15sp" />
+
+
+                <EditText
+                    android:id="@+id/sign_up_tv_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/round_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="Last Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:paddingLeft="10dp"
+                    android:textSize="15sp" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/layout_dob"
+                            android:background="@drawable/round_border"
+                            android:padding="1dp">
+
+                            <Spinner
+                                android:id="@+id/gender_input"
+                                android:layout_width="@dimen/spinner_width"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@null"
+                                android:dropDownWidth="match_parent"
+                                android:ems="10"
+                                android:entries="@array/sex"
+                                android:gravity="center"
+                                android:inputType="textCapWords"
+                                android:overlapAnchor="false"
+                                android:spinnerMode="dropdown"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@mipmap/shape_down"
+                                android:tint="@color/colorPrimaryDark" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layout_dob"
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="5dp"
+                            android:padding="1dp">
+
+                            <EditText
+                                android:id="@+id/sign_up_tv_year"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/round_border"
+                                android:gravity="center|left"
+                                android:hint="Year of Birth"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:paddingLeft="6dp"
+                                android:textSize="15sp" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+                <EditText
+                    android:id="@+id/sign_up_tv_mobile_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/round_border"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="Mobile No."
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingLeft="10dp"
+                    android:textSize="15sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/suburb"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toLeftOf="@+id/img_search_suburb"
+                        android:background="@drawable/round_border"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:hint="Suburb"
+                        android:inputType="textCapWords"
+                        android:maxLength="25"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/toast_clr"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/img_search_suburb"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@android:drawable/ic_menu_search"
+                        android:tint="@color/colorPrimaryDark" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/suburb"
+                        android:layout_marginTop="1dp"
+                        android:gravity="center"
+                        android:text="Oops, Please enter this Field"
+                        android:textColor="@color/btn_orng"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/round_border"
+                    android:padding="1dp">
+
+                    <Spinner
+                        android:id="@+id/sign_up_tv_country_input"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@null"
+                        android:dropDownWidth="match_parent"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="textCapWords"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"
+                        android:textSize="10sp" />
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/shape_down"
+                        android:tint="@color/colorPrimaryDark" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/round_border"
+                    android:padding="1dp">
+
+                    <Spinner
+                        android:id="@+id/sign_up_tv_time_input"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@null"
+                        android:dropDownWidth="match_parent"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="textCapWords"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"
+                        android:textSize="10sp" />
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/shape_down"
+                        android:tint="@color/colorPrimaryDark" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_question_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txt_enterprise_question"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp" />
+
+                    <EditText
+                        android:id="@+id/sign_up_tv_last_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/round_border"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="10dp"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/layout_question_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txt_enterprise_question_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp" />
+
+                    <EditText
+                        android:id="@+id/sign_up_tv_last_field_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/round_border"
+                        android:ems="10"
+                        android:layout_marginRight="45dp"
+                        android:layout_below="@+id/txt_enterprise_question_1"
+                        android:gravity="center_vertical"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="10dp"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/txt_enterprise_question_1"
+                        android:src="@drawable/ic_calendar"
+                        android:layout_height="40dp"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

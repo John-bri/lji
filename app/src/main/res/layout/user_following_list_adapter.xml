@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   android:layout_width="160dp"
+                                   android:layout_height="wrap_content"
+                                   android:layout_margin="6dp"
+                                   android:id="@+id/channel_item_parent"
+                                   app:cardBackgroundColor="#E5E5E5"
+                                   app:cardPreventCornerOverlap="false">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <ImageView
+                    android:id="@+id/channel_dash_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="fitXY"/>
+            <RelativeLayout android:layout_width="30dp"
+                            android:layout_above="@+id/txt_content_channel_item"
+                            android:id="@+id/lay_channel_item_follow"
+                            android:layout_marginRight="8dp"
+                            android:layout_toLeftOf="@+id/lay_channel_item_share"
+                            android:background="@drawable/layout_top_round_corner"
+                            android:layout_marginBottom="-4dp"
+                            android:layout_height="32dp">
+                <ImageView android:layout_width="30dp"
+                           android:src="@drawable/follower"
+                           android:layout_gravity="center"
+                           android:padding="7dp"
+                           android:layout_alignParentRight="true"
+                           android:id="@+id/img_follow"
+                           android:elevation="10dp"
+                           android:layout_height="30dp"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="30dp"
+                            android:layout_above="@+id/txt_content_channel_item"
+                            android:id="@+id/lay_channel_item_share"
+                            android:layout_marginRight="8dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/layout_top_round_corner"
+                            android:layout_marginBottom="-4dp"
+                            android:layout_height="32dp">
+                <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:id="@+id/item_share"
+                        android:tint="@color/colorPrimaryDark"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_share"
+                        android:elevation="10dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_content_channel_item"
+                    android:layout_below="@+id/channel_dash_image"
+                    android:background="@color/white"
+                    android:paddingBottom="5dp">
+
+                <TextView
+                        android:id="@+id/text_chnl_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="10dp"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/md_grey_600"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
+
+                <TextView
+                        android:id="@+id/text_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/text_chnl_name"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="10sp"/>
+
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

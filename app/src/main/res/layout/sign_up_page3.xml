@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+<LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/layout_signup_category_parent"
+        android:layout_height="match_parent">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:text="Pick upto 5 categories of interest"
+            android:layout_height="wrap_content"/>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="6dp"
+            android:id="@+id/layout_search_edit_text"
+            android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/btn_categories"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:background="@drawable/round_back_view"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Choose Categories"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13sp"/>
+        />
+
+
+    </RelativeLayout>
+
+    <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:scrollbars="none"
+            android:layout_marginTop="8dp"
+            android:id="@+id/horizontalScrollView">
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_margin="6dp"
+            android:id="@+id/layout_selected_category"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <!--<include layout="@layout/category_list"/>-->
+        <!--<include layout="@layout/category_list"/>-->
+        <!--<include layout="@layout/category_list"/>-->
+    </LinearLayout>
+    </HorizontalScrollView>
+
+    <GridView
+            android:id="@+id/gridView"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content"
+            android:numColumns="3"/>
+</LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

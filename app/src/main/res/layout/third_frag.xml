@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView android:layout_width="wrap_content"
+              android:text="Pitch yourself"
+              android:textAllCaps="true"
+              android:layout_marginTop="12dp"
+              android:textColor="@color/colorPrimaryDark"
+              android:textStyle="bold|italic"
+              android:textSize="22sp"
+              android:layout_gravity="center"
+              android:layout_height="wrap_content"/>
+    <TextView android:layout_width="wrap_content"
+              android:text="Be heard"
+              android:textAllCaps="true"
+              android:textColor="@color/colorPrimaryDark"
+              android:textStyle="bold|italic"
+              android:textSize="22sp"
+              android:layout_gravity="center"
+              android:layout_height="wrap_content"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+              android:textSize="12sp"
+              android:textColor="#484848"
+              android:layout_marginLeft="35dp"
+              android:layout_marginTop="8dp"
+              android:layout_marginRight="35dp"
+              android:layout_marginBottom="15dp"
+              android:layout_height="wrap_content"/>
+    <TextView android:layout_width="wrap_content"
+              android:textSize="14sp"
+              android:text="Add a Topic"
+              android:layout_gravity="center"
+              android:textColor="@color/colorPrimaryDark"
+              android:layout_height="wrap_content"/>
+        <RelativeLayout android:layout_width="match_parent"
+                        android:paddingBottom="25dp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="35dp"
+                        android:elevation="12dp"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_corner_line2">
+            <EditText android:id="@+id/title_txt"
+                      android:layout_width="match_parent"
+                      android:layout_height="30dp"
+                      android:layout_marginRight="25dp"
+                      android:hint="Title"
+                      android:textSize="15dp"
+                      android:inputType="textCapSentences"
+                      android:layout_marginTop="20dp"
+                      android:enabled="false"
+                      android:layout_marginLeft="25dp"
+                      android:ems="10"
+                      android:maxLength="75"
+                      android:paddingLeft="20dp"
+                      android:textColor="@color/colorPrimary"
+                      android:background="@drawable/round_border"
+                      android:contentDescription="@string/pin_content_desc"/>
+            <RelativeLayout android:layout_width="match_parent"
+                            android:id="@+id/spin_lyt"
+                            android:layout_marginRight="24dp"
+                            android:layout_below="@+id/title_txt"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="24.5dp"
+                            android:background="@drawable/round_border"
+                            android:layout_height="30dp">
+                <ImageView
+                        android:layout_width="45dp"
+                        android:src="@mipmap/shape_down"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:tint="@color/colorPrimaryDark"
+                        android:layout_height="10dp"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Select Category"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"
+                        android:layout_height="match_parent"/>
+
+            </RelativeLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:id="@+id/group_lyt"
+                          android:layout_marginRight="26dp"
+                          android:layout_below="@+id/spin_lyt"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginLeft="25dp"
+                          android:orientation="horizontal"
+                          android:layout_height="32dp">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Group Type"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:layout_below="@+id/imageView"
+                        android:layout_gravity="center"
+                        android:layout_height="match_parent"/>
+                <RelativeLayout android:layout_width="wrap_content"
+
+                                android:background="@drawable/round_border"
+                                android:layout_height="30dp">
+                    <ImageView
+                            android:layout_width="45dp"
+                            android:src="@mipmap/shape_down"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:tint="@color/colorPrimaryDark"
+                            android:layout_height="10dp"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Select"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:gravity="center"
+                            android:textSize="14sp"
+                            android:layout_gravity="center"
+                            android:layout_height="match_parent"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:text="Max. No. of participants in each group"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/toast_clr"
+                    android:gravity="center"
+                    android:id="@+id/max_txt"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:textSize="12sp"
+                    android:layout_below="@+id/group_lyt"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"/>
+            <com.xw.repo.BubbleSeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    app:bsb_auto_adjust_section_mark="true"
+                    app:bsb_second_track_color="@color/colorPrimary"
+                    app:bsb_section_count="9"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_below="@+id/max_txt"
+                    app:bsb_min="1"
+                    app:bsb_max="10"
+                    android:enabled="false"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/seekbar"
+                    app:bsb_is_float_type="false"
+                    app:bsb_progress="1"
+                    app:bsb_section_text_size="10sp"
+                    app:bsb_always_show_bubble="false"
+                    app:bsb_section_text_position="below_section_mark"
+                    app:bsb_show_section_mark="true"
+                    app:bsb_show_section_text="true"
+                    app:bsb_show_thumb_text="true"
+                    app:bsb_thumb_text_size="18sp"
+                    app:bsb_touch_to_seek="true"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:text="Upload Picture"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:id="@+id/upload_pic"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:textSize="14sp"
+                    android:layout_below="@+id/seekbar"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/sign_up_avatar"
+                        android:layout_width="45dp"
+                        android:layout_below="@+id/upload_pic"
+                        android:layout_height="45dp"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/ic_choose_profile_image"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="0dp"/>
+
+        </RelativeLayout>
+</LinearLayout>

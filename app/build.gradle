@@ -1,0 +1,136 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "au.com.letsjoinin.android"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "0.1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        ndk.abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+    buildTypes {
+        release {
+//            debuggable true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds true
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError true
+    }
+}
+allprojects {
+    repositories {
+        google()
+        maven {
+            url 'http://repo.brightcove.com/releases'
+        }
+        maven { url 'https://maven.google.com' }
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        jcenter()
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+dependencies {
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.percentlayout:percentlayout:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.vectordrawable:vectordrawable:1.0.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.core:core:1.0.2'
+    implementation 'com.daimajia.easing:library:2.0@aar'
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
+    implementation 'org.jetbrains.anko:anko-common:0.10.8'
+    implementation 'q.rorbin:FastImageSize:1.0.3'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+    implementation 'com.google.android.gms:play-services-auth:18.0.0'
+    //firebase
+    implementation 'com.google.firebase:firebase-core:17.3.0'
+    implementation 'com.google.firebase:firebase-storage:19.1.1'
+    implementation 'com.google.firebase:firebase-database:19.2.1'
+    implementation 'com.google.firebase:firebase-messaging:20.1.5'
+
+    implementation 'com.google.firebase:firebase-auth:19.3.0'
+//    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'android.arch.work:work-runtime:1.0.1'
+    implementation 'com.xwray:groupie:2.1.0'
+    implementation 'com.facebook.android:facebook-login:[5,6)'
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+    //brightcove
+    implementation "com.brightcove.player:android-sdk:${anpVersion}"
+    implementation "com.brightcove.player:android-ima-plugin:${anpVersion}"
+    implementation 'com.google.ads.interactivemedia.v3:interactivemedia:3.11.2'
+//    implementation 'com.google.android.gms:play-services-ads:17.2.1'
+    implementation "com.brightcove.player:android-onceux-plugin:${anpVersion}"
+    implementation "com.brightcove.player:android-ssai-plugin:${anpVersion}"
+    implementation "com.brightcove.player:exoplayer2:${anpVersion}"
+
+    implementation 'com.xw.repo:bubbleseekbar:3.20-lite'
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+
+//    implementation 'com.fasterxml.jackson.core:jackson-databind:2.8.5'
+//    implementation 'com.fasterxml.jackson.core:jackson-core:2.8.5'
+//    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.8.5'
+
+    implementation 'com.sprylab.android.texturevideoview:texturevideoview:1.0.2'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
+    implementation 'com.github.iammert:ScalingLayout:1.2.1'
+//    implementation 'com.jayway.jsonpath:json-path:2.4.0'
+//    )
+//            {
+//                exclude group: "net.minidev:asm"
+//            }
+    implementation 'uk.co.samuelwall:material-tap-target-prompt:3.0.0'
+    implementation 'ru.rambler.android:swipe-layout:1.1.0'
+    implementation project(':stickyheaders')
+    implementation project(':smarttablayoutlibrary')
+    implementation project(':smarttabutils-v4')
+    implementation project(":fluidbottomnavigation")
+    implementation project(":explosionfield")
+    implementation project(':split-pane-layout')
+    implementation project(':emoji-ios')
+    implementation project(':avloadinglibrary')
+    implementation project(path: ':shinebuttonlib')
+    implementation project(path: ':ucrop')
+    implementation project(path: ':dialogplus')
+    implementation project(path: ':librarytooltip')
+    implementation project(path: ':exoplayerhelper')
+
+}
+apply plugin: 'com.google.gms.google-services'

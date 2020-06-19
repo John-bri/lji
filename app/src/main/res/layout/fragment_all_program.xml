@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/all_program_parent"
+        tools:context="au.com.letsjoinin.android.UI.activity.NavigationActivity">
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:background="#F9F9F9"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:contentScrim="@color/white"
+                app:titleEnabled="false">
+
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="200dp">
+                <au.com.letsjoinin.android.UI.view.DynamicHeightImageView
+                        android:id="@+id/program_banner_imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/image_placeholder_1"/>
+                <com.brightcove.player.view.BrightcoveVideoView
+                        android:id="@+id/program_banner_brightcove_video_view"
+                        android:layout_width="match_parent"
+                        android:background="@color/white"
+                        android:visibility="gone"
+                        android:layout_height="match_parent"/>
+
+
+            </RelativeLayout>
+            <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    android:paddingLeft="40dp"
+                    android:background="#46FFFFFF"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:titleTextAppearance="@style/Toolbar.TitleText"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="42dp"
+            android:clipToPadding="false"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:id="@+id/layout_group"
+                android:layout_height="match_parent">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/layout_top_content_desc"
+                    android:visibility="visible"
+                    android:layout_height="match_parent">
+
+                <au.com.letsjoinin.android.utils.JustifiedTextView
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:id="@+id/tv_program_desc"
+                        android:layout_margin="15dp"
+                        android:layout_height="wrap_content"/>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:id="@+id/layout_txt_channel_name"
+                        android:layout_height="wrap_content">
+
+                    <TextView android:layout_width="match_parent"
+                              android:text="Channel Name >"
+                              android:gravity="right"
+                              android:id="@+id/tv_channel_name"
+                              android:textSize="18sp"
+                              android:textColor="@color/btn_orng"
+                              android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <iammert.com.view.scalinglib.ScalingLayout
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            app:radiusFactor="1"
+            android:clickable="true"
+            android:layout_gravity="center_horizontal"
+            android:stateListAnimator="@animator/sl_state_animator"
+            app:layout_behavior="iammert.com.view.scalinglib.ScalingLayoutBehavior">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E4E4E4"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/layout_fav_program"
+                    android:gravity="center">
+
+                <com.sackcentury.shinebuttonlib.ShineButton
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:clickable="false"
+                        android:id="@+id/item_favourite"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"
+                        app:btn_color="@android:color/darker_gray"
+                        app:btn_fill_color="#f26d7d"
+                        app:siShape="@mipmap/shape536"
+                        android:elevation="10dp"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:layout_alignParentBottom="true"
+                        android:text="Favourite"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:textSize="12sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/layout_share_program"
+                    android:gravity="center">
+
+                <ImageView
+                        android:id="@+id/imageViewshare"
+                        android:layout_width="34dp"
+                        android:padding="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="34dp"
+                        android:src="@mipmap/share"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="Share"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        android:textSize="12sp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </iammert.com.view.scalinglib.ScalingLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto"
+                  android:id="@+id/bottom_sheet"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:paddingLeft="10dp"
+                  android:paddingRight="10dp"
+                  android:paddingTop="60dp"
+                  android:orientation="vertical"
+                  android:clickable="false"
+                  android:layout_marginBottom="-8dp"
+                  app:behavior_hideable="false"
+                  android:clipToPadding="false"
+                  app:behavior_peekHeight="62dp"
+                  app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                           xmlns:app="http://schemas.android.com/apk/res-auto"
+                                           android:layout_width="match_parent"
+                                           android:layout_height="match_parent"
+                                           app:cardElevation="3dp"
+                                           android:paddingTop="4dp"
+                                           app:cardCornerRadius="4dp"
+                                           app:cardUseCompatPadding="true"
+                                           android:clickable="true"
+                                           app:cardBackgroundColor="#E5E5E5"
+                                           app:cardPreventCornerOverlap="false">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:layout_height="match_parent">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/layout_up_down"
+                        android:orientation="vertical">
+
+
+                    <ImageView android:layout_width="60dp"
+                               android:src="@drawable/shape_up"
+                               android:tint="@color/btn_orng"
+                               android:gravity="center"
+                               android:padding="10dp"
+                               android:id="@+id/img_arrow"
+                               android:layout_gravity="center"
+                               android:layout_height="30dp"/>
+
+
+                    <RelativeLayout
+                            android:layout_width="180dp"
+                            android:layout_height="36dp"
+                            android:layout_marginLeft="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="35dp"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginTop="2dp"
+                            android:elevation="2dp"
+                            android:layout_below="@+id/horizontalScrollView"
+                            android:background="@drawable/round_back_view"
+                            android:gravity="center_vertical">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:text="View Program Info"
+                                android:layout_centerInParent="true"
+                                android:textSize="14sp"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:layout_height="wrap_content"/>
+                        <EditText
+                                android:id="@+id/search_text_box"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_toLeftOf="@+id/search_img_view"
+                                android:background="@android:color/transparent"
+                                android:ems="10"
+                                android:visibility="gone"
+                                android:gravity="center_vertical"
+                                android:hint="Search Group"
+                                android:inputType="textEmailAddress"
+                                android:padding="5dp"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12sp"/>
+                        <ImageView
+                                android:id="@+id/search_img_view"
+                                android:layout_width="32dp"
+                                android:layout_height="match_parent"
+                                android:padding="3dp"
+                                android:visibility="gone"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerHorizontal="true"
+                                android:src="@android:drawable/ic_menu_search"/>
+
+
+                    </RelativeLayout>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Filter Blocks By   "
+                            android:gravity="right"
+                            android:layout_marginTop="4dp"
+                            android:textSize="16sp"
+                            android:layout_gravity="center"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue_border"
+                            android:drawableTint="@color/blue_border"
+                            android:drawableRight="@android:drawable/arrow_down_float"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmer_view_container1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <GridView
+                            android:id="@+id/block_gridView"
+                            android:layout_width="fill_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:horizontalSpacing="6dp"
+                            android:scrollbars="none"
+                            android:verticalSpacing="6dp"
+                            android:layout_height="wrap_content"
+                            android:numColumns="3"/>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+            </LinearLayout>
+
+            <!--<GridView-->
+            <!--android:id="@+id/block_gridView"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:visibility="gone"-->
+            <!--android:horizontalSpacing="6dp"-->
+            <!--android:scrollbars="none"-->
+            <!--android:verticalSpacing="6dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:numColumns="3"/>-->
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

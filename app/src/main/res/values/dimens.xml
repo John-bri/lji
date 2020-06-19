@@ -1,0 +1,34 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="spinner_width">400dp</dimen>
+    //
+
+    <dimen name="standard_font_size">12sp</dimen>
+    <dimen name="title_font_size">15sp</dimen>
+
+
+    <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
+    <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
+    <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
+    <dimen tools:override="true" name="design_navigation_icon_padding">16dp</dimen>
+    <dimen name="design_fab_image_size" tools:override="true">36dp</dimen>
+    <dimen name="activity_padding">16dp</dimen>
+    <dimen name="placeholder_image">50dp</dimen>
+    <dimen name="placeholder_text_height">5dp</dimen>
+
+
+    <dimen name="max_prompt_width">250dp</dimen>
+
+    <declare-styleable name="ViewSwitch">
+        <attr name="firstText" format="string"/>
+        <attr name="secondText" format="string"/>
+        <attr name="activeTextColor" format="color"/>
+        <attr name="inActiveTextColor" format="color"/>
+        <attr name="activeColor" format="color"/>
+        <attr name="inActiveColor" format="color"/>
+        <attr name="currentActive" format="enum">
+            <enum name="First" value="0"/>
+            <enum name="Second" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

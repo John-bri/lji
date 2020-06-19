@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/next_item"
+        android:title="Next group" />
+    <item android:id="@+id/active_item"
+        android:title="Active groups" />
+
+    <item android:id="@+id/most_active_item"
+        android:title="Most Active groups" />
+</menu>
